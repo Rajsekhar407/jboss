@@ -53,16 +53,16 @@
                   \n export PATH=$PATH
                   \n export CLASSPATH=$CLASSPATH"
 
-#    - name: Download JBoss
-#      get_url: 
-#        url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
-#        dest: /opt/jboss-as-7.1.0.Final.zip
-#        mode: 0755
+    - name: Download JBoss
+      get_url: 
+        url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.0.Final/jboss-as-7.1.0.Final.zip
+        dest: /opt/jboss-as-7.1.0.Final.zip
+        mode: 0755
 
-#    - name: Copy files of jboss
-#      copy: 
-#        src=/opt/jboss-as-7.1.0.Final 
-#        dest=/usr/share/jboss-as
+    - name: Copy files of jboss
+      copy: 
+        src=/opt/jboss-as-7.1.0.Final 
+        dest=/usr/share/jboss-as
 
     - name: Unarchive a file that needs to be downloaded
       unarchive:
